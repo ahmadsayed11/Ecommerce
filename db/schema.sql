@@ -44,6 +44,7 @@ CREATE TABLE `admins` (
 
 CREATE TABLE `cats` (
   `id` int(10) UNSIGNED NOT NULL,
+  
   `name` varchar(255) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,4 +1,4 @@
-INSERT INTO cats 
+INSERT INTO cats (`name`)
 VALUES
 ('Laptops'),
 ('PCs'),
