@@ -1,5 +1,6 @@
  <?php
  include("../inc/header.php");
+ include_once("app.php")
  
  ?>
 	
@@ -9,7 +10,7 @@
 		<div class="banner_background" style="background-image:url(images/banner_background.jpg)"></div>
 		<div class="container fill_height">
 			<div class="row fill_height">
-				<div class="banner_product_image"><img src="./assets/images/banner_product.png" alt=""></div>
+				<div class="banner_product_image"><img src="<?= URL;?>./assets/images/banner_product.png" alt=""></div>
 				<div class="col-lg-5 offset-lg-4 fill_height">
 					<div class="banner_content">
 						<h1 class="banner_text">new era of smartphones</h1>

@@ -1,4 +1,5 @@
 <?php
+namespace TechStore\Classes\Validations;
 
 class Email implements ValidateRule
 {

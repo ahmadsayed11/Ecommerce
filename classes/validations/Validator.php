@@ -1,7 +1,7 @@
 <?php
 // wazyft al class dah any adylo al name o al valur o hwa yshyk lo al 7aga aly mab3ota dyh sa7 2o 8alt
 //for each aly gawa al class htlaf 3la kol rule o t3ml mnaha object o b3d lama t3ml al object hanshof lo fy error y3ml push fy al errors array aly 3ndna
-
+namespace TechStore\Classes\Validations;
 class Validator
 {
     private $errors = [];

@@ -20,7 +20,7 @@ include("../inc/header.php");
 
 				<!-- Selected Image -->
 				<div class="col-lg-6 order-lg-2 order-1">
-					<div class="image_selected"><img src="./assets/images/single_4.jpg" alt=""></div>
+					<div class="image_selected"><img src="<?= URL;?>./assets/images/single_4.jpg" alt=""></div>
 				</div>
 
 				<!-- Description -->

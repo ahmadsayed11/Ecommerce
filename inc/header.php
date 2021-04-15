@@ -1,3 +1,21 @@
+<?php
+//
+	require_once("app.php")
+?>
+
+<?php
+
+//use the name space of cats in models in classes
+
+use TechStore\Classes\Models\Cat;
+
+$c = new Cat;
+$cats = $c->selectAll("name , id");
+print_r($cats);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +25,20 @@
 <meta name="description" content="TechStore">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/bootstrap4/bootstrap.min.css">
-<link href="../theme/assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/main_styles.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/responsive.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/shop_styles.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/shop_responsive.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/product_styles.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/product_responsive.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/cart_styles.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/cart_responsive.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/contact_styles.css">
-<link rel="stylesheet" type="text/css" href="../theme/assets/css/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/bootstrap4/bootstrap.min.css">
+<link href="<?= URL; ?>assets/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/plugins/slick-1.8.0/slick.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/shop_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/shop_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/product_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/product_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/cart_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/cart_responsive.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="<?= URL; ?>assets/css/contact_responsive.css">
 
 </head>
 
@@ -113,14 +131,13 @@
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>
+									<?php foreach($cats as $cat) {?>
+
+											<li><a href="../theme/category.php?id=<?php echo $cat["id"]?>"><?= $cat["name"];?><i class="fas fa-chevron-right ml-auto"></i></a></li>
+										
+									
+									<?php }?>
+					
 								</ul>
 							</div>
 

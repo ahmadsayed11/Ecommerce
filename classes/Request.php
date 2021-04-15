@@ -1,5 +1,5 @@
 <?php
-
+namespace TechStore\Classes;
 class Request 
 {
     public function get($key)

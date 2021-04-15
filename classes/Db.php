@@ -1,5 +1,7 @@
 <?php
+namespace TechStore\Classes;
 
+//al abstract class msh bynf3 inheritance m3ah
 abstract class Db 
 {
     protected $conn;
@@ -7,7 +9,8 @@ abstract class Db
 
     public function connect() 
     {   
-        $this->conn = mysqli_connect("localhost" , "root" , "" , "tech_store");
+        $this->conn = mysqli_connect(DB_SERVERNAME , DB_USERNAME , DB_PASSWORD , DB_NAME);
+        
     }
 
     public function selectAll(string $fields = "*" ) 
@@ -63,4 +66,3 @@ abstract class Db
 
 
 
-?>

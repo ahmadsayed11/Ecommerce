@@ -1,17 +1,5 @@
 <?php
 
-require_once('classes/Session.php');
-require_once('classes/Db.php');
-require_once('classes/models/Product.php');
-require_once('classes/models/Order.php');
-require_once('classes/validations/ValidateRule.php');
-require_once('classes/validations/Required.php');
-require_once('classes/validations/Numeric.php');
-require_once('classes/validations/Max.php');
-require_once('classes/validations/Str.php');
-require_once('classes/validations/Email.php');
-require_once('classes/validations/Validator.php');
-
 
 
 
@@ -41,14 +29,8 @@ require_once('classes/validations/Validator.php');
 // echo '<pre>';
 // var_dump($res);
 // echo '</pre>';
-$v = new Validator;
-$v->validate('age' , '' , 
-['required' , 'numeric']
-);
 
-echo '<pre>';
-print_r($v->getErrors());
-echo '</pre>';
+
 
 
 ?>

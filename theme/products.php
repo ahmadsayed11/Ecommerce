@@ -54,7 +54,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="../Uploads/1.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="<?= URL;?>../Uploads/1.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Philips BT6900A</a></div></div>
@@ -65,7 +65,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/2.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/2.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Huawei MediaPad...</a></div></div>
@@ -76,7 +76,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/3.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/3.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Apple iPod shuffle</a></div></div>
@@ -87,7 +87,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/4.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/4.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Sony MDRZX310W</a></div></div>
@@ -99,7 +99,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/5.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/5.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
 									<div class="product_name"><div><a href="#" tabindex="0">LUNA Smartphone</a></div></div>
@@ -111,7 +111,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/6.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/6.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Canon IXUS 175...</a></div></div>
@@ -123,7 +123,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/7.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/7.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Canon STM Kit...</a></div></div>
@@ -136,7 +136,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/8.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/8.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Rapoo 7100p Gray</a></div></div>
@@ -147,7 +147,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/9.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/9.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$379</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Canon EF</a></div></div>
@@ -158,7 +158,7 @@ include("../inc/header.php");
 							<!-- Product Item -->
 							<div class="product_item">
 								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="../Uploads/10.jpg" alt=""></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img  src="<?= URL;?>../Uploads/10.jpg" alt=""></div>
 								<div class="product_content">
 									<div class="product_price">$225</div>
 									<div class="product_name"><div><a href="#" tabindex="0">Gembird SPK-103</a></div></div>

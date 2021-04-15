@@ -1,5 +1,7 @@
 <?php
+//vendor class
 
+namespace TechStore\Classes;
 class Session 
 {
     public function __construct()
