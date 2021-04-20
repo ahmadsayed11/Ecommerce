@@ -3,6 +3,21 @@
 include("../inc/header.php");
 ?>
 
+<?php
+if($request->gethas('keyword') ) {
+	$keyword = $request->get('keyword');
+} else {
+	$keyword = "";
+}
+use TechStore\Classes\Models\Product;
+$pr = new Product;
+$prods = $pr->selectWhere("name LIKE '%$keyword%'" , "id , name , img , price");
+
+
+
+
+
+?>
 	
 	<!-- Home -->
 
@@ -10,7 +25,7 @@ include("../inc/header.php");
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/shop_background.jpg"></div>
 		<div class="home_overlay"></div>
 		<div class="home_content d-flex flex-column align-items-center justify-content-center">
-			<h2 class="home_title">Search results for: keyword here</h2>
+			<h2 class="home_title">Search results for: <?= $keyword?></h2>
 		</div>
 	</div>
 
@@ -26,15 +41,9 @@ include("../inc/header.php");
 						<div class="sidebar_section">
 							<div class="sidebar_title">Categories</div>
 							<ul class="sidebar_categories">
-								<li><a href="#">Computers & Laptops</a></li>
-								<li><a href="#">Cameras & Photos</a></li>
-								<li><a href="#">Hardware</a></li>
-								<li><a href="#">Smartphones & Tablets</a></li>
-								<li><a href="#">TV & Audio</a></li>
-								<li><a href="#">Gadgets</a></li>
-								<li><a href="#">Car Electronics</a></li>
-								<li><a href="#">Video Games & Consoles</a></li>
-								<li><a href="#">Accessories</a></li>
+							<?php foreach($cats as $cat) : ?>
+								<li><a href="category.php?=id <?= $cat['id']?>"><?= $cat['name']?></a></li>
+							<?php endforeach?>
 							</ul>
 						</div>
 						
@@ -52,119 +61,28 @@ include("../inc/header.php");
 							<div class="product_grid_border"></div>
 
 							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/1.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Philips BT6900A</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
-
+							<?php foreach ($prods as $prod) : ?>
+							
+							
 							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/2.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Huawei MediaPad...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/3.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Apple iPod shuffle</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/4.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Sony MDRZX310W</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
+							
 								
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/5.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">LUNA Smartphone</a></div></div>
+								<!-- Product Item -->
+								<div class="product_item">
+									<div class="product_border"></div>
+									<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="<?= URL . "../uploads/" . $prod["img"] ;?>" alt=""></div>
+									<div class="product_content">
+										<div class="product_price">$<?= $prod['price']?></div>
+										<div class="product_name"><div><a href="<?= URL; ?>product.php?id=<?= $prod["id"];?>" tabindex="0"><?= $prod['name']?></a></div></div>
+									</div>
+							
 								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
 								
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/6.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon IXUS 175...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-								
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/7.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon STM Kit...</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-								
-							</div>
+							
+							<?php endforeach?>
 
 
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/8.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Rapoo 7100p Gray</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/9.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$379</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Canon EF</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
-
-							<!-- Product Item -->
-							<div class="product_item">
-								<div class="product_border"></div>
-								<div class="product_image d-flex flex-column align-items-center justify-content-center"><<img src="<?= URL;?>../Uploads/10.jpg" alt=""></div>
-								<div class="product_content">
-									<div class="product_price">$225</div>
-									<div class="product_name"><div><a href="#" tabindex="0">Gembird SPK-103</a></div></div>
-								</div>
-								<div class="product_fav"><i class="fas fa-cart-plus"></i></div>
-							</div>
+						
 
 						</div>
 

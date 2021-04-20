@@ -3,7 +3,7 @@
 //include paths and urls;
 
 define("PATH" , __DIR__ ."/" );
-define("URL" , "http://localhost/route_1/workshop/e-commerce/tech-commerce/theme/");
+define("URL" ,"http://localhost/route_1/workshop/e-commerce/tech-commerce/theme/");
 
 
 //constants for database method al connect kont 7atet fyha al 7agat hard code dlw2ty 3ayz agbha mn al constants

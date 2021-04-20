@@ -9,10 +9,15 @@
 
 use TechStore\Classes\Models\Cat;
 
+
 $c = new Cat;
 $cats = $c->selectAll("name , id");
-print_r($cats);
 
+use TechStore\Classes\cart;
+
+$cart = new Cart;
+$cartCount =  $cart->count();
+$cartTotal = $cart->total();
 
 ?>
 
@@ -59,7 +64,7 @@ print_r($cats);
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">Techstore</a></div>
+							<div class="logo"><a href= "http://localhost/route_1/workshop/e-commerce/tech-commerce/theme/"> Techstore</a></div>
 						</div>
 					</div>
 
@@ -68,8 +73,9 @@ print_r($cats);
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
-									<form action="#" class="header_search_form clearfix">
-										<input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+
+									<form method="GET" action="<?= URL?>search.php" class="header_search_form clearfix">
+										<input type="search" name="keyword" required="required" class="header_search_input" placeholder="Search for products...">
 										<div class="custom_dropdown">
 											<div class="custom_dropdown_list">
 												<span class="custom_dropdown_placeholder clc">All Categories</span>
@@ -84,8 +90,10 @@ print_r($cats);
 												</ul>
 											</div>
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="../theme/assets/images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?= URL?>assets/images/search.png" alt=""></button>
 									</form>
+
+
 								</div>
 							</div>
 						</div>
@@ -99,11 +107,11 @@ print_r($cats);
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
 										<img src="../theme/assets/images/cart.png" alt="">
-										<div class="cart_count"><span>10</span></div>
+										<div class="cart_count"><span><?= $cartCount;?></span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="#">Cart</a></div>
-										<div class="cart_price">$85</div>
+										<div class="cart_text"><a href="<?= URL?>cart.php">Cart</a></div>
+										<div class="cart_price">$<?= $cartTotal; ?></div>
 									</div>
 								</div>
 							</div>
@@ -145,9 +153,9 @@ print_r($cats);
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">All products<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Cart<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="http://localhost/route_1/workshop/e-commerce/tech-commerce/theme/">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="http://localhost/route_1/workshop/e-commerce/tech-commerce/theme/products.php">All products<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="<?= URL?>cart.php">Cart<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
 

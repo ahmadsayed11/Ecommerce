@@ -22,9 +22,9 @@ abstract class Db
 
     public function selectid($id , string $fields = "*" ) 
     {
-        $sql = "SELECT $fields FROM $this->table WHERE `ID` = $id";
+        $sql = "SELECT $fields FROM $this->table WHERE `id` = $id";
         $result = mysqli_query($this->conn , $sql );
-        return mysqli_fetch_all($result , MYSQLI_ASSOC);
+        return mysqli_fetch_assoc($result);
     }
 
     public function selectWhere($conds , string $fields = "*" ) : array
@@ -39,7 +39,7 @@ abstract class Db
     {
         $sql = "SELECT COUNT(*) AS cnt from $this->table";
         $result = mysqli_query($this->conn , $sql );
-        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return mysqli_fetch_assoc($result);
     }
 
     public function insert(string $fields , $values) 

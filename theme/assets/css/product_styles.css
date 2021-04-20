@@ -1547,7 +1547,7 @@ select option
 .product_price
 {
 	display: inline-block;
-	font-size: 24px;
+	font-size: 16px;
 	font-weight: 500;
     margin-left: 75px;
 }
