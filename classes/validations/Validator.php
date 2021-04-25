@@ -11,8 +11,9 @@ class Validator
     {
         foreach($rules as $rule) {
             // dah a5tsar 3lasahn asm al classes zy asm al objects aly a7na 3mlnaha f3lashan kda ana a5t al $obj o sawatw bl asm al rule
-
-            $obj = new $rule;
+            //hydyny error 3lashan m3 kol rule ana msh 3ml ay namespace lyha
+            $className = "TechStore\\Classes\\Validations\\" . $rule;
+            $obj = new $className;
 
             // if($rule == "required") {
             //     $obj = new Required;

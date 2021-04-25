@@ -1,6 +1,6 @@
 <?php
 require_once("../theme/app.php");
-use TechStore\Classes\cart;
+use TechStore\Classes\Cart;
 use TechStore\Classes\Request;
 
 if($request->postHas('submit')) {
@@ -20,7 +20,8 @@ if($request->postHas('submit')) {
         'price'=>$price,
         'img'=>$img,
     ]; 
-   $cart = new Cart;
+   $cart = new Cart ;
+   
    $cart->add($id , $prodData);
    
     $request->redirect("products.php");

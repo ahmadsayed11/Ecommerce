@@ -1,6 +1,8 @@
 <?php
 namespace TechStore\Classes;
 
+use mysqli;
+
 //al abstract class msh bynf3 inheritance m3ah
 abstract class Db 
 {
@@ -46,6 +48,14 @@ abstract class Db
     {
         $sql = "INSERT INTO $this->table ($fields) VALUES ($values)";
         return mysqli_query($this-> conn , $sql);
+    }
+
+    public function insertAndGetId(string $fields , $values) 
+    {
+        $sql = "INSERT INTO $this->table ($fields) VALUES ($values)";
+        mysqli_query($this-> conn , $sql);
+        //method gahza 3lashan tag3 allast id
+        return mysqli_insert_id($this->conn);
     }
     
     public function update(string $set , $id) : bool

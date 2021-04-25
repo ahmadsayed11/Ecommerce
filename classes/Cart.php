@@ -30,6 +30,24 @@ class cart
      {
          return array_key_exists($id , $_SESSION['cart']);
      }
+
+     public function all() 
+     {
+         return $_SESSION['cart'];
+     } 
+
+     public function remove(string $id)
+     {
+         unset($_SESSION['cart'][$id]);
+     }
+
+     public function empty() 
+     {
+         $_SESSION['cart'] = [];
+     }
+
+
+
 }
 
 
